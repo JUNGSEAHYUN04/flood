@@ -8,31 +8,31 @@
 
 ## 폴더 구조
 flood/
-├── config.py              # API 키 및 경로 설정
-├── run.py                 # 실시간 수집 트리거
-├── init_master.py         # 하수관로 위치 마스터 초기 생성
-├── fix_master.py          # 위치 마스터 None 좌표 수정
-├── README.md              # 프로젝트 설명
+├── config.py                  # API 키 및 경로 설정
+├── run.py                     # 실시간 수집 트리거
+├── init_master.py             # 하수관로 위치 마스터 초기 생성
+├── fix_master.py              # 위치 마스터 None 좌표 수정
+├── README.md                  # 프로젝트 설명
 │
-├── collect/               # 데이터 수집
+├── collect/                   # 데이터 수집
 │   ├── drainpipe_collect.py   # 서울시 하수관로 수위 수집
 │   └── rainfall_collect.py    # 기상청 강우량 수집
 │
-├── preprocess/            # 데이터 전처리
+├── preprocess/                # 데이터 전처리
 │   ├── dem_process.py         # DEM 전처리
 │   ├── flood_process.py       # 침수 흔적도 전처리
 │   ├── merge.py               # 정적 데이터 동별 병합
 │   └── realtime_merge.py      # 실시간 데이터 동별 병합
 │
 └── data/
-├── raw/               # 원본 데이터
-│   ├── dem/           # DEM 타일 (37608, 37705, 37709, 37612)
-│   ├── rainfall/      # 강우량 원본 및 격자 엑셀
-│   ├── drainpipe/     # 하수관로 수위 원본
-│   ├── flood/         # 침수 흔적도 원본
-│   └── boundary/      # 서울시 행정경계 shp
+├── raw/                   # 원본 데이터
+│   ├── dem/               # DEM 타일 (37608, 37705, 37709, 37612)
+│   ├── rainfall/          # 강우량 원본 및 격자 엑셀
+│   ├── drainpipe/         # 하수관로 수위 원본
+│   ├── flood/             # 침수 흔적도 원본
+│   └── boundary/          # 서울시 행정경계 shp
 │
-└── processed/         # 전처리 완료 데이터
+└── processed/             # 전처리 완료 데이터
 ├── dem_seoul.csv          # 서울 전체 픽셀별 위경도 + 고도값
 ├── location_master.csv    # 하수관로 관측소 위치 마스터 (581개)
 ├── grid_to_dong.csv       # 기상청 격자 → 법정동 코드 매핑
